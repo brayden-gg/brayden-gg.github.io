@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brayden Goldstein-Gelb</title>
+
+        <!-- Tailwind & Icons -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "system-ui", "sans-serif"],
+                        },
+                        colors: {
+                            dark: "#1a1a1a",
+                            darker: "#0f0f0f",
+                            card: "#2a2a2a",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <!-- Google Fonts with preload to prevent layout shift -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body class="bg-dark text-white font-sans">
+        <!-- Navbar -->
+        <nav class="fixed w-full top-0 z-50 px-6 py-6 pointer-events-auto">
+            <div class="max-w-6xl mx-auto flex justify-center items-center">
+                <div class="nav-pill px-6 py-3 rounded-full backdrop-blur-xl">
+                    <div class="flex items-center space-x-6">
+                        <a href="./index.html" class="text-white/80 hover:text-white transition-colors">About</a>
+                        <a href="./projects.html" class="text-white/80 hover:text-white transition-colors">Projects</a>
+                        <div class="relative flex justify-center">
+                            <a href="#" class="text-white transition-colors">Research</a>
+                            <div class="absolute bottom-[-13px] left-1/2 w-24 h-[1px] -translate-x-1/2 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+                        </div>
+                        <a href="./contact.html" class="text-white/80 hover:text-white transition-colors">Contact/CV</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="pt-40 px-6">
+            <section class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl font-bold mb-24 animate-fadeIn stagger-1">Research</h1>
+            </section>
+
+            <section class="max-w-3xl mx-auto space-y-8">
+                <!-- QAOA Paper -->
+                <div class="card p-6 rounded-2xl animate-fadeIn stagger-1">
+                    <h3 class="text-xl font-semibold mb-2">Distributed Quantum Signal Processing</h3>
+                    <h4 class="text-white text-md mb-2"><b>Brayden Goldstein-Gelb</b>, Kun Liu, John Martyn, Hengyun Zhou, Yongshan Ding, Yuan Liu</h4>
+                    <p class="text-white/70 text-sm mb-4">In Preparation</p>
+                </div>
+
+                <!-- QAOA Paper -->
+                <div class="card p-6 rounded-2xl animate-fadeIn stagger-1">
+                    <h3 class="text-xl font-semibold mb-2">Convergence guarantee for linearly-constrained combinatorial optimization with a quantum alternating operator ansatz</h3>
+                    <h4 class="text-white text-md mb-2"><b>Brayden Goldstein-Gelb</b>, Phillip C. Lotshaw</h4>
+                    <p class="text-white/70 text-sm mb-4">Preprint, 2024</p>
+                    <a href="https://arxiv.org/abs/2409.18829" class="text-blue-400 hover:text-blue-300 text-sm">View on arXiv</a><br/>
+                    <a href="./resources/documents/posters/constrained_qaoa_poster.pdf" class="text-pink-400 hover:text-pink-300 text-sm">View poster</a>
+                </div>
+
+
+                <!-- AR Vis Poster -->
+                <div class="card p-6 rounded-2xl animate-fadeIn stagger-2">
+                    <h3 class="text-xl font-semibold mb-2">Environment Adaptive AR Label Visualization</h3>
+                    <h4 class="text-white text-md mb-2">Ashley Kwon, Yuanbo Li, Eva Schiller, <b>Brayden Goldstein-Gelb</b>, James Tompkin</h4>
+                    <p class="text-white/70 text-sm mb-4">Poster, Brown University Undergraduate Research Symposium, 2023</p>
+                    <a href="./resources/documents/posters/ar_label_poster.pdf" class="text-pink-400 hover:text-pink-300 text-sm">View Poster</a>
+                </div>
+
+                <div class="card p-6 rounded-2xl animate-fadeIn stagger-2">
+                    <h3 class="text-xl font-semibold mb-2">Code Development for "Generating Handwriting via Decoupled Style Descriptors"</h3>
+                    <h4 class="text-white text-md mb-2">Atsunobu Kotani, Stefanie Tellex, James Tompkin</h4>
+                    <p class="text-white/70 text-sm mb-4">Built an interactive application for synthesizing handwriting via a recurrent neural network. Acknowledged in the repo's README. </p>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-030-58610-2_45" class="text-pink-400 hover:text-pink-300 text-sm">ECCV 2020</a><br/>
+                    <a href="https://github.com/brownvc/decoupled-style-descriptors" class="text-green-400 hover:text-green-300 text-sm">GitHub Repo</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="px-6 py-12 mt-24 border-t border-white/10">
+            <div class="max-w-6xl mx-auto text-center">
+                <p class="text-white/50 text-sm">© 2025 Brayden Goldstein-Gelb</p>
+            </div>
+        </footer>
+    </body>
+</html>

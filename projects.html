@@ -1,293 +1,234 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brayden Goldstein-Gelb</title>
+
+    <!-- Tailwind & Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
+
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                    colors: {
-                        'dark': '#1a1a1a',
-                        'darker': '#0f0f0f',
-                        'card': '#2a2a2a',
-                    }
-                }
+        theme: {
+            extend: {
+            fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+                dark: '#1a1a1a',
+                darker: '#0f0f0f',
+                card: '#2a2a2a',
+            }
             }
         }
+        }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: #1a1a1a;
-            color: #ffffff;
-        }
 
-        .nav-pill {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    <!-- Google Fonts with preload to prevent layout shift -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-        .nav-pill:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .profile-image {
-            border: 3px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .social-icon {
-            transition: all 0.2s ease;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.1);
-            color: #60a5fa;
-        }
-
-        .animate-fadeIn {
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        .stagger-5 { animation-delay: 0.5s; }
-
-        .card {
-            background: #2a2a2a;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .theme-toggle {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-    </style>
-</head>
-<body class="bg-dark text-white font-sans">
-    <nav class="fixed w-full top-0 z-50 px-6 py-6 pointer-events-auto">
-        <div class="max-w-6xl mx-auto flex justify-center items-center">
-            <div class="nav-pill px-6 py-3 rounded-full backdrop-blur-xl">
-                <div class="flex items-center space-x-6">
-                    <a href="./index.html" class="text-white/80 hover:text-white transition-colors">About</a>
-                    <div class="relative flex justify-center">
-                        <a href="#" class="text-white transition-colors">Projects</a>
-                        <div class="absolute bottom-[-13px] left-1/2 w-24 h-[1px] -translate-x-1/2 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+    <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="bg-dark text-white font-sans">
+        <nav class="fixed w-full top-0 z-50 px-6 py-6 pointer-events-auto">
+            <div class="max-w-6xl mx-auto flex justify-center items-center">
+                <div class="nav-pill px-6 py-3 rounded-full backdrop-blur-xl">
+                    <div class="flex items-center space-x-6">
+                        <a href="./index.html" class="text-white/80 hover:text-white transition-colors">About</a>
+                        <div class="relative flex justify-center">
+                            <a href="#" class="text-white transition-colors">Projects</a>
+                            <div class="absolute bottom-[-13px] left-1/2 w-24 h-[1px] -translate-x-1/2 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+                        </div>
+                        <a href="./research.html" class="text-white/80 hover:text-white transition-colors">Research</a>
+                        <a href="./contact.html" class="text-white/80 hover:text-white transition-colors">Contact/CV</a>
                     </div>
-                    <a href="./research.html" class="text-white/80 hover:text-white transition-colors">Research</a>
-                    <a href="./CV.html" class="text-white/80 hover:text-white transition-colors">CV</a>
-                    <a href="./contact.html" class="text-white/80 hover:text-white transition-colors">Contact</a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section class="flex items-center justify-center pt-40">
-        <div class="max-w-4xl mx-auto text-center">
+        <!-- Hero Section -->
+        <section class="flex items-center justify-center pt-40">
+            <div class="max-w-4xl mx-auto text-center">
 
-            <!-- Main Heading -->
-            <h1 class="text-4xl lg:text-5xl font-bold mb-8 leading-tight animate-fadeIn stagger-1">
-                Projects
-            </h1>
-            <p class="text-sm sm:text-md text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed animate-fadeIn stagger-2">
-                Things I've made for fun
-            </p>
-        </div>
-    </section>
-
-
-
-    <!-- Portfolio Grid -->
-    <section class="px-6 pb-20 my-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Strava Graph -->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-top" src="resources/images/project_strava.png">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2"><span style="color: #fc4c02">Strava</span> Data Visualization Web App</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            Interactive web app that visualizes a user's Strava data
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a href="https://github.com/brayden-gg/Running-Graph" class="ml-auto bg-[#fc4c02]/80 hover:bg-[fc4c02]/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Re-Font -->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-top" src="resources/images/project_refont.png">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Re-Font Chrome Extension</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            A Chrome extension that allows users to customize the font, size and color of text on any webpage.
-                            Use it to meet your style needs, or simply to make text easier to read.
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a  class="text-teal-400 hover:text-teal-400/80" href="https://chromewebstore.google.com/detail/re-font/jeggnpdlnbocmdalbikmfpokecfnicni?hl=en-US" alt="GitHub" class="bg-white/60 hover:bg-white/80 rounded-full p-1">
-                                <span>View in Chrome Web Store</span>
-                            </a>
-                            <a href="https://github.com/brayden-gg/Re-Font" class="bg-teal-400 hover:bg-teal-400/80 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Adversarial Sticker -->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-center" src="resources/images/project_adversarial_sticker.JPG">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Adversarial sticker</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            Created a sticker that can be placed in a scene and cause an image classifier to misclassify the scene. (Final project for Brown CSCI1952Q: Algorithmic Aspects of Machine Learning)
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a class="text-yellow-400 hover:text-yellow-400/80" href="./resources/documents/project_adversarial_sticker.pdf">
-                                <span>View Project Writeup</span>
-                            </a>
-                            <a href="https://github.com/brayden-gg/AdversarialSticker" class="bg-yellow-400/80 hover:bg-yellow-400/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Buses GA -->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-center" src="resources/images/project_buses.png">
-                      <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Bus Route Optimization Algorithm</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            Genetic algorithm inspired by evolutionary processes to optimize bus routes for the city of Somerville, MA.
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a class="text-indigo-400 hover:text-indigo-400/80" href="http://htmlpreview.github.io/?https://github.com/brayden-gg/GA-bus-routes/blob/master/Algorithm/plugInOriginal.html">
-                                <span>View Demo</span>
-                            </a>
-
-                            <a href="https://github.com/brayden-gg/GA-bus-routes" alt="GitHub" class="bg-indigo-400/80 hover:bg-indigo-400/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Fluid Sim -->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-top" src="resources/images/project_fluid_sim.png">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Interactive fluid simulation</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            A web-based fluid simulation that allows users to interact with the fluid using their mouse.
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a class="text-green-400 hover:text-green-400/80" href="https://htmlpreview.github.io/?https://github.com/brayden-gg/simple-fluid-sim/blob/master/index.html">
-                                <span>View Demo</span>
-                            </a>
-                            <a href="https://github.com/brayden-gg/simple-fluid-sim" class="bg-green-400/80 hover:bg-green-400/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Voxel Carving -->
-                 <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-center" src="resources/images/project_voxel_carving.png">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Voxel Carving</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            Creates a 3D representation of an object from a set of 2D images using the voxel carving algorithm.
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a href="https://github.com/brayden-gg/voxel-carving" class="ml-auto bg-blue-400/80 hover:bg-blue-400/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Graph ZKP-->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-center" src="resources/images/project_graph_zkp.png">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Zero Knowledge Proofs for 3-colorable graphs</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            A Zero Knowledge Proof (ZKP) to convince a verifier that a graph is 3-colorable without revealing the actual coloring. (Final project for Brown CSCI1515: Applied Cryptography)
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a class="text-red-400 hover:text-red-400/80" href="./resources/documents/project_graph_zkp.pdf">
-                                <span>View Project Writeup</span>
-                            </a>
-                            <a href="https://github.com/brayden-gg/AdversarialSticker" class="bg-red-400/80 hover:bg-red-400/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quantum FPV -->
-                <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                    <img class="h-48 w-full object-cover object-center" src="resources/images/project_quantum_fpv.jpg">
-                    <div class="p-6 flex flex-col flex-1">
-                        <h3 class="text-xl font-semibold mb-2">Quantum Mechanics Proofs Library</h3>
-                        <p class="text-white/70 text-sm mb-4">
-                            Library in Lean 3 to model and prove statements about quantum particles. I then used the library to prove the no-cloning theorem. (Final project for Brown CSCI1951X: Formal Proof and Verification)
-                        </p>
-                        <div class="flex justify-between items-center text-sm mt-auto">
-                            <a href="https://github.com/brayden-gg/Quantum_FPV" class="ml-auto bg-purple-400/80 hover:bg-purple-400/60 rounded-full p-1">
-                                <img src="./resources/icons/github.svg" class="w-5 h-5">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Main Heading -->
+                <h1 class="text-4xl lg:text-5xl font-bold mb-8 leading-tight animate-fadeIn stagger-1">
+                    Projects
+                </h1>
+                <p class="text-sm sm:text-md text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed animate-fadeIn stagger-2">
+                    Things I've made for fun
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="px-6 py-12 border-t border-white/10">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-white/50 text-sm">
-                © 2025 Brayden Goldstein-Gelb
-            </p>
-        </div>
-    </footer>
-</body>
+
+
+        <!-- Portfolio Grid -->
+        <section class="px-6 pb-20 my-10">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Strava Graph -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_strava.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2"><span style="color: #fc4c02">Strava</span> Data Visualization Web App</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                Interactive web app that visualizes a user's Strava data
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a href="https://github.com/brayden-gg/Running-Graph" class="ml-auto bg-[#fc4c02] hover:bg-[#fa743c] rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Re-Font -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_refont.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Re-Font Chrome Extension</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                A Chrome Extension that lets you to customize the font, size and color of text on any webpage.
+                                Use it to meet your style needs, or just to make text easier to read.
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a  class="text-teal-400 hover:text-teal-300" href="https://chromewebstore.google.com/detail/re-font/jeggnpdlnbocmdalbikmfpokecfnicni?hl=en-US" alt="GitHub" class="bg-white/60 hover:bg-white/80 rounded-full p-1">
+                                    <span>View in Chrome Web Store</span>
+                                </a>
+                                <a href="https://github.com/brayden-gg/Re-Font" class="bg-teal-400 hover:bg-teal-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quantum FPV -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_quantum_fpv.jpg">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Quantum Mechanics Proofs Library</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                Library in Lean 3 to model and prove statements about quantum particles. I then used the library to prove the no-cloning theorem. (Final project for Brown CSCI1951X: Formal Proof and Verification)
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a href="https://github.com/brayden-gg/Quantum_FPV" class="ml-auto bg-purple-400 hover:bg-purple-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adversarial Sticker -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_adversarial_sticker.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Adversarial sticker</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                Created a sticker that can be placed in a scene and cause image classifiers to misclassify the scene. (Final project for Brown CSCI1952Q: Algorithmic Aspects of Machine Learning)
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a class="text-yellow-400 hover:text-yellow-300" href="./resources/documents/project_writeups/project_adversarial_sticker.pdf">
+                                    <span>View Project Writeup</span>
+                                </a>
+                                <a href="https://github.com/brayden-gg/AdversarialSticker" class="bg-yellow-400 hover:bg-yellow-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Buses GA -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_buses.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Bus Route Optimization Algorithm</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                Genetic algorithm to optimize bus routes for the city of Somerville, MA.
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a class="text-indigo-400 hover:text-indigo-300" href="http://htmlpreview.github.io/?https://github.com/brayden-gg/GA-bus-routes/blob/master/Algorithm/plugInOriginal.html">
+                                    <span>View Demo</span>
+                                </a>
+
+                                <a href="https://github.com/brayden-gg/GA-bus-routes" alt="GitHub" class="bg-indigo-400 hover:bg-indigo-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Voxel Carving -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_voxel_carving.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Voxel Carving</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                Creates a 3D representation of an object from a set of 2D images using the voxel carving algorithm.
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a href="https://github.com/brayden-gg/voxel-carving" class="ml-auto bg-blue-400 hover:bg-blue-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Graph ZKP-->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_graph_zkp.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Zero Knowledge Proofs for 3-colorable graphs</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                A Zero Knowledge Proof (ZKP) to convince a verifier that a graph is 3-colorable without revealing the coloring. (Final project for Brown CSCI1515: Applied Cryptography)
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a class="text-red-400 hover:text-red-300" href="./resources/documents/project_writeups/project_graph_zkp.pdf">
+                                    <span>View Project Writeup</span>
+                                </a>
+                                <a href="https://github.com/brayden-gg/AdversarialSticker" class="bg-red-400 hover:bg-red-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fluid Sim -->
+                    <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_fluid_sim.png">
+                        <div class="p-6 flex flex-col flex-1">
+                            <h3 class="text-xl font-semibold mb-2">Interactive fluid simulation</h3>
+                            <p class="text-white/70 text-sm mb-4">
+                                A web-based fluid simulation that allows users to interact with the fluid in real-time using mouse input.
+                            </p>
+                            <div class="flex justify-between items-center text-sm mt-auto">
+                                <a class="text-green-400 hover:text-green-300" href="https://htmlpreview.github.io/?https://github.com/brayden-gg/simple-fluid-sim/blob/master/index.html">
+                                    <span>View Demo</span>
+                                </a>
+                                <a href="https://github.com/brayden-gg/simple-fluid-sim" class="bg-green-400 hover:bg-green-300 rounded-full p-1">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="px-6 py-12 border-t border-white/10">
+            <div class="max-w-6xl mx-auto text-center">
+                <p class="text-white/50 text-sm">
+                    © 2025 Brayden Goldstein-Gelb
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>

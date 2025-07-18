@@ -1,0 +1,76 @@
+html {
+      overflow-y: scroll; /* Prevent scrollbar layout shift */
+}
+
+body {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.nav-pill {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-pill:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.profile-image {
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-hover {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: #60a5fa;
+}
+
+/* Fade-in animation: only opacity, no transform */
+.animate-fadeIn {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeInSlide 0.7s ease-out forwards;
+    will-change: opacity, transform; /* Hint for smoother performance */
+    }
+
+    @keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+/* Staggered delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+.card {
+    background: #2a2a2a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
