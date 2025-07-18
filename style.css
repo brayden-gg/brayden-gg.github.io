@@ -26,8 +26,15 @@ body {
 }
 
 .card-hover:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.card-hover-big {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card-hover-big:hover {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
 }
 
 .social-icon {
@@ -52,7 +59,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-    }
+}
 
 /* Staggered delays */
 .stagger-1 { animation-delay: 0.1s; }
