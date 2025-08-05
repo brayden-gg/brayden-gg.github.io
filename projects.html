@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
     <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brayden Goldstein-Gelb</title>
-
-    <!-- Tailwind & Icons -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-        theme: {
-            extend: {
-            fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
-            },
-            colors: {
-                dark: '#1a1a1a',
-                darker: '#0f0f0f',
-                card: '#2a2a2a',
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWFSB5NX4K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-            }
-        }
-        }
-    </script>
+            gtag("js", new Date());
 
-    <!-- Google Fonts with preload to prevent layout shift -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+            gtag("config", "G-TWFSB5NX4K");
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brayden Goldstein-Gelb</title>
 
-    <link rel="stylesheet" href="./style.css">
+        <!-- Tailwind & Icons -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
+
+        <!-- Tailwind Config -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Inter", "system-ui", "sans-serif"],
+                        },
+                        colors: {
+                            dark: "#1a1a1a",
+                            darker: "#0f0f0f",
+                            card: "#2a2a2a",
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <!-- Google Fonts with preload to prevent layout shift -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body class="bg-dark text-white font-sans">
         <nav class="fixed w-full top-0 z-50 px-6 py-6 pointer-events-auto">
@@ -54,35 +65,27 @@
         <!-- Hero Section -->
         <section class="flex items-center justify-center pt-40">
             <div class="max-w-4xl mx-auto text-center">
-
                 <!-- Main Heading -->
-                <h1 class="text-4xl lg:text-5xl font-bold mb-12 leading-tight animate-fadeIn stagger-1">
-                    Projects
-                </h1>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-12 leading-tight animate-fadeIn stagger-1">Projects</h1>
             </div>
         </section>
-
-
 
         <!-- Portfolio Grid -->
         <section class="px-6 pb-20 my-10">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
                     <!-- Graph ZKP-->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_graph_zkp.png">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_graph_zkp.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Zero Knowledge Proofs for 3-colorable graphs</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                A Zero Knowledge Proof (ZKP) to convince a verifier that a graph is 3-colorable without revealing the coloring. (Final project for Brown CSCI1515: Applied Cryptography)
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">A Zero Knowledge Proof (ZKP) to convince a verifier that a graph is 3-colorable without revealing the coloring. (Final project for Brown CSCI1515: Applied Cryptography)</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a class="text-red-400 hover:text-red-300" href="./resources/documents/project_writeups/project_graph_zkp.pdf">
                                     <span>View Project Writeup</span>
                                 </a>
                                 <a href="https://github.com/brayden-gg/graph-colorable-zkp" class="bg-red-400 hover:bg-red-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
@@ -90,19 +93,16 @@
 
                     <!-- Re-Font -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_refont.png">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_refont.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Re-Font Chrome Extension</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                A Chrome Extension that lets you to customize the font, size and color of text on any webpage.
-                                Use it to meet your style needs, or just to make text easier to read.
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">A Chrome Extension that lets you to customize the font, size and color of text on any webpage. Use it to meet your style needs, or just to make text easier to read.</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
-                                <a  class="text-teal-400 hover:text-teal-300" href="https://chromewebstore.google.com/detail/re-font/jeggnpdlnbocmdalbikmfpokecfnicni?hl=en-US" alt="GitHub" class="bg-white/60 hover:bg-white/80 rounded-full p-1">
+                                <a class="text-teal-400 hover:text-teal-300" href="https://chromewebstore.google.com/detail/re-font/jeggnpdlnbocmdalbikmfpokecfnicni?hl=en-US" alt="GitHub" class="bg-white/60 hover:bg-white/80 rounded-full p-1">
                                     <span>View in Chrome Web Store</span>
                                 </a>
                                 <a href="https://github.com/brayden-gg/Re-Font" class="bg-teal-400 hover:bg-teal-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
@@ -110,15 +110,13 @@
 
                     <!-- Quantum FPV -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_quantum_fpv.jpg">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_quantum_fpv.jpg" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Quantum Mechanics Proofs Library</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                Library in Lean 3 to model and prove statements about quantum particles. I then used the library to prove the no-cloning theorem. (Final project for Brown CSCI1951X: Formal Proof and Verification)
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">Library in Lean 3 to model and prove statements about quantum particles. I then used the library to prove the no-cloning theorem. (Final project for Brown CSCI1951X: Formal Proof and Verification)</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a href="https://github.com/brayden-gg/Quantum_FPV" class="ml-auto bg-purple-400 hover:bg-purple-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
@@ -126,51 +124,44 @@
 
                     <!-- Adversarial Sticker -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_adversarial_sticker.png">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_adversarial_sticker.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Adversarial sticker</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                Created a sticker that can be placed in a scene and cause image classifiers to misclassify the scene. (Final project for Brown CSCI1952Q: Algorithmic Aspects of Machine Learning)
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">Created a sticker that can be placed in a scene and cause image classifiers to misclassify the scene. (Final project for Brown CSCI1952Q: Algorithmic Aspects of Machine Learning)</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a class="text-yellow-400 hover:text-yellow-300" href="./resources/documents/project_writeups/project_adversarial_sticker.pdf">
                                     <span>View Project Writeup</span>
                                 </a>
                                 <a href="https://github.com/brayden-gg/AdversarialSticker" class="bg-yellow-400 hover:bg-yellow-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
 
-
                     <!-- Buses GA -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_buses.png">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_buses.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Bus Route Optimization Algorithm</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                Genetic algorithm to optimize bus routes for the city of Somerville, MA.
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">Genetic algorithm to optimize bus routes for the city of Somerville, MA.</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a class="text-indigo-400 hover:text-indigo-300" href="http://htmlpreview.github.io/?https://github.com/brayden-gg/GA-bus-routes/blob/master/Algorithm/plugInOriginal.html">
                                     <span>View Demo</span>
                                 </a>
 
                                 <a href="https://github.com/brayden-gg/GA-bus-routes" alt="GitHub" class="bg-indigo-400 hover:bg-indigo-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_cosmic_quest.png">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_cosmic_quest.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Cosmic Quest (Hack@Brown 2024)</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                Take command of a rocket ship navigating the cosmos. Your mission: guide your spacecraft back to your home planet, traversing through gravitational obstacles that test your piloting skills and strategic acumen.
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">Take command of a rocket ship navigating the cosmos. Your mission: guide your spacecraft back to your home planet, traversing through gravitational obstacles that test your piloting skills and strategic acumen.</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a class="text-purple-400 hover:text-purple-300" href="https://www.jasoneveleth.com/space-game/">
                                     <span>Play Game</span>
@@ -181,7 +172,7 @@
                                     <span>View Post</span>
                                 </a>
                                 <a href="https://github.com/jasoneveleth/space-game/" class="bg-purple-400 hover:bg-purple-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
@@ -189,32 +180,27 @@
 
                     <!-- Strava Graph -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_strava.png">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_strava.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2"><span style="color: #fc4c02">Strava</span> Data Visualization Web App</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                Interactive web app that visualizes a user's Strava data
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">Interactive web app that visualizes a user's Strava data</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a href="https://github.com/brayden-gg/Running-Graph" class="ml-auto bg-[#fc4c02] hover:bg-[#fa743c] rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
 
-
                     <!-- Voxel Carving -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_voxel_carving.png">
+                        <img class="h-48 w-full object-cover object-center" src="resources/images/project_voxel_carving.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Voxel Carving</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                Creates a 3D representation of an object from a set of 2D images using the voxel carving algorithm.
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">Creates a 3D representation of an object from a set of 2D images using the voxel carving algorithm.</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a href="https://github.com/brayden-gg/voxel-carving" class="ml-auto bg-blue-400 hover:bg-blue-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
@@ -222,23 +208,20 @@
 
                     <!-- Fluid Sim -->
                     <div class="card rounded-2xl overflow-hidden card-hover animate-fadeIn stagger-3 flex flex-col h-full">
-                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_fluid_sim.png">
+                        <img class="h-48 w-full object-cover object-top" src="resources/images/project_fluid_sim.png" />
                         <div class="p-6 flex flex-col flex-1">
                             <h3 class="text-xl font-semibold mb-2">Interactive fluid simulation</h3>
-                            <p class="text-white/70 text-sm mb-4">
-                                A web-based fluid simulation that allows users to interact with the fluid in real-time using mouse input.
-                            </p>
+                            <p class="text-white/70 text-sm mb-4">A web-based fluid simulation that allows users to interact with the fluid in real-time using mouse input.</p>
                             <div class="flex justify-between items-center text-sm mt-auto">
                                 <a class="text-green-400 hover:text-green-300" href="https://htmlpreview.github.io/?https://github.com/brayden-gg/simple-fluid-sim/blob/master/index.html">
                                     <span>View Demo</span>
                                 </a>
                                 <a href="https://github.com/brayden-gg/simple-fluid-sim" class="bg-green-400 hover:bg-green-300 rounded-full p-1">
-                                    <img src="./resources/icons/github.svg" class="w-5 h-5">
+                                    <img src="./resources/icons/github.svg" class="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -246,9 +229,7 @@
         <!-- Footer -->
         <footer class="px-6 py-12 border-t border-white/10">
             <div class="max-w-6xl mx-auto text-center">
-                <p class="text-white/50 text-sm">
-                    © 2025 Brayden Goldstein-Gelb
-                </p>
+                <p class="text-white/50 text-sm">© 2025 Brayden Goldstein-Gelb</p>
             </div>
         </footer>
     </body>
