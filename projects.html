@@ -229,8 +229,12 @@
         <!-- Footer -->
         <footer class="px-6 py-12 border-t border-white/10">
             <div class="max-w-6xl mx-auto text-center">
-                <p class="text-white/50 text-sm">© 2025 Brayden Goldstein-Gelb</p>
+                <p class="text-white/50 text-sm">© <span id="current-year"></span> Brayden Goldstein-Gelb</p>
             </div>
         </footer>
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById("current-year").textContent = currentYear;
+        </script>
     </body>
 </html>

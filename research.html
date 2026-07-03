@@ -72,6 +72,7 @@
                 <div class="card card-hover-big p-6 rounded-2xl animate-fadeIn stagger-1">
                     <h3 class="text-xl font-semibold mb-2">COMPAS: A Distributed Multi-Party SWAP Test for Parallel Quantum Algorithms</h3>
                     <h4 class="text-white text-md mb-2"><b>Brayden Goldstein-Gelb</b>, Kun Liu, John M. Martyn, Hengyun Zhou, Yongshan Ding, Yuan Liu</h4>
+
                     <p class="text-sm mb-4"><a href="https://dl.acm.org/doi/10.1145/3779212.3790143" class="text-white/70 hover:text-white">ASPLOS 2026</a></p>
 
                     <a href="https://arxiv.org/abs/2511.23434" class="text-blue-400 hover:text-blue-300 text-sm">View on arXiv</a><br />
@@ -100,8 +101,12 @@
 
         <footer class="px-6 py-12 mt-24 border-t border-white/10">
             <div class="max-w-6xl mx-auto text-center">
-                <p class="text-white/50 text-sm">© 2025 Brayden Goldstein-Gelb</p>
+                <p class="text-white/50 text-sm">© <span id="current-year"></span> Brayden Goldstein-Gelb</p>
             </div>
         </footer>
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById("current-year").textContent = currentYear;
+        </script>
     </body>
 </html>
